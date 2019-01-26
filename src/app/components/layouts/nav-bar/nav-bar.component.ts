@@ -4,7 +4,8 @@ import { Router } from '@angular/router';
 interface Path {
   title: string,
   path: string,
-  children?: any
+  children?: any,
+  icon: string
 }
 
 @Component({
@@ -18,11 +19,13 @@ export class NavBarComponent implements OnInit {
     {
       title: 'Forms',
       path: 'forms',
+      icon: 'fa fa-crop',
       children: []
     },
     {
       title: 'Pages',
-      path: '',
+      path: 'home',
+      icon: 'fa fa-apple',
       children: [
         {
           title: 'Tags',
@@ -45,16 +48,19 @@ export class NavBarComponent implements OnInit {
     {
       title: 'RTL Mode',
       path: 'rtl',
+      icon: 'fa fa-file',
       children: []
     },
     {
       title: 'Login / Register',
       path: 'login-register',
+      icon: 'fa fa-bell',
       children: []
     },
     {
       title: 'Gallery',
       path: 'gallery',
+      icon: 'fa fa-list',
       children: []
     },
   ];

@@ -12,7 +12,7 @@
       <div class="col-lg order-lg-first">
         <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
           <li class="nav-item dropdown" *ngFor="let path of paths">
-            <a class="nav-link" data-toggle="dropdown" (click)="nav(path.path)"><i class="fa fa-file"></i>{{path.title}}</a>
+            <a class="nav-link" data-toggle="dropdown" (click)="nav(path.path)"><i class="{{path.icon}}"></i>{{path.title}}</a>
             <div class="dropdown-menu dropdown-menu-arrow" *ngIf="path.children.length > 0">
               <a class="dropdown-item" *ngFor="let childPath of path.children" (click)="nav(childPath.path)">{{childPath.title}}</a>
             </div>
